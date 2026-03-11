@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医疗多模态数据集与临床合作平台</title>
+    <meta name="description" id="page-description" content="医疗多模态数据集与临床合作展示平台，涵盖胃肠癌、听神经瘤、脊索瘤、眼科多模态和 MRI 多场强方向。">
+    <link rel="stylesheet" href="style.css?v=20260312-2">
+    <script>
+        (function () {
+            var search = window.location.search || "";
+            var match = search.match(/[?&]lang=([^&#]+)/);
+            var queryLang = "";
+            var savedLang = "zh";
+            if (match && match[1]) {
+                try {
+                    queryLang = decodeURIComponent(match[1].replace(/\+/g, " "));
+                } catch (e) {
+                    queryLang = match[1];
+                }
+            }
+            try {
+                savedLang = localStorage.getItem("meddata-lang") || "zh";
+            } catch (e) {}
+            var lang = queryLang === "en" ? "en" : (savedLang === "en" ? "en" : "zh");
+            window.MEDDATA_LANG = lang;
+            document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+            try {
+                localStorage.setItem("meddata-lang", lang);
+            } catch (e) {}
+        })();
+    </script>
+    <script src="assets/generated/site-data.js?v=20260312-2"></script>
+    <script src="assets/generated/site-data-en.js?v=20260312-2"></script>
+</head>
+<body data-page="home">
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" data-transition>
+                <span class="brand-mark">MD</span>
+                <span class="brand-copy">
+                    <strong>MedData Hub</strong>
+                    <small id="brand-tagline">医疗数据与临床合作展示平台</small>
+                </span>
+            </a>
+            <div class="header-actions">
+                <nav class="site-nav">
+                    <a href="#datasets" id="nav-datasets">核心数据集</a>
+                    <a href="#decoded" id="nav-decoded">数据预览</a>
+                    <a href="#hospitals" id="nav-hospitals">合作医院</a>
+                    <a href="#collaboration" id="nav-collaboration">临床合作</a>
+                </nav>
+                <div class="lang-toggle" id="lang-toggle" aria-label="Language switch">
+                    <button type="button" class="lang-option" data-lang="zh">中文</button>
+                    <button type="button" class="lang-option" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow" id="hero-eyebrow">Clinical-grade, locally audited</p>
+                <h1 id="hero-title">构建可直接用于展示与沟通的医疗数据门户。</h1>
+                <p class="hero-lead" id="hero-lead">
+                    页面围绕胃肠癌、听神经瘤、脊索瘤、眼科多模态和 MRI 多场强方向展开，
+                    统一展示数据结构、影像预览、研究价值与合作网络，适合直接用于项目介绍与对外沟通。
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#datasets" id="hero-button-datasets">浏览数据集</a>
+                    <a class="button button-secondary" href="#hospitals" id="hero-button-hospitals">查看合作医院</a>
+                </div>
+                <div class="hero-stats" id="hero-stats"></div>
+            </div>
+            <div class="hero-panel">
+                <div class="hero-panel-top">
+                    <span class="panel-tag" id="hero-panel-tag">Data Preview</span>
+                    <strong id="hero-panel-title">多模态数据内容总览</strong>
+                </div>
+                <div class="hero-preview-grid" id="hero-preview-grid"></div>
+            </div>
+        </section>
+
+        <section class="section" id="datasets">
+            <div class="section-heading">
+                <p class="eyebrow" id="datasets-eyebrow">Datasets</p>
+                <h2 id="datasets-title">点击卡片直接进入专门的数据集详情页</h2>
+                <p id="datasets-lead">每个详情页都围绕该数据方向的图像、统计摘要、研究价值与合作潜力展开。</p>
+            </div>
+            <div class="dataset-grid" id="dataset-grid"></div>
+        </section>
+
+        <section class="section" id="decoded">
+            <div class="section-heading">
+                <p class="eyebrow" id="decoded-eyebrow">Decoded Samples</p>
+                <h2 id="decoded-title">多模态数据预览</h2>
+                <p id="decoded-lead">包含 CRC 统计图、听神经瘤三维影像关键切片，以及眼科 CT/MRI 等多模态图像预览。</p>
+            </div>
+            <div class="decoded-strip" id="decoded-strip"></div>
+        </section>
+
+        <section class="section hospitals-section" id="hospitals">
+            <div class="section-heading">
+                <p class="eyebrow" id="hospitals-eyebrow">Hospital Network</p>
+                <h2 id="hospitals-title">合作医院的动态中国地图</h2>
+                <p id="hospitals-lead">地图上的每个点位都对应实际合作城市，点击可以查看该城市承接的医院或科研机构。</p>
+            </div>
+            <div class="hospital-layout">
+                <article class="map-card">
+                    <div class="map-stage">
+                        <svg class="china-svg" viewBox="0 0 100 100" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="mapFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#0a2d4f"/>
+                                    <stop offset="100%" stop-color="#155f7a"/>
+                                </linearGradient>
+                                <filter id="mapGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                    <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#4dd0c8" flood-opacity="0.16"/>
+                                </filter>
+                            </defs>
+                            <path class="china-outline" filter="url(#mapGlow)"
+                                d="M8 36 L11 26 L18 18 L28 14 L37 12 L44 10 L52 12 L60 10 L70 13 L80 18 L88 26 L90 34 L88 42 L84 48 L81 57 L75 64 L73 71 L65 76 L58 82 L48 81 L41 78 L34 79 L25 73 L18 67 L13 58 L9 49 L7 42 Z" />
+                            <path class="china-island"
+                                d="M80 84 L84 82 L87 85 L84 89 L80 88 Z" />
+                            <path class="china-line" d="M19 28 L31 26 L43 30 L56 29 L66 23 L79 27" />
+                            <path class="china-line" d="M17 44 L30 41 L43 44 L57 41 L70 47 L78 56" />
+                            <path class="china-line" d="M27 63 L41 60 L52 65 L65 63" />
+                            <g id="hospital-routes"></g>
+                        </svg>
+                        <div class="hospital-markers" id="hospital-markers"></div>
+                    </div>
+                    <div class="map-legend">
+                        <span><i></i> <span id="legend-marker">动态脉冲点位</span></span>
+                        <span><i class="legend-line"></i> <span id="legend-line">与平台协作网络</span></span>
+                    </div>
+                </article>
+
+                <aside class="hospital-panel">
+                    <div class="hospital-summary" id="hospital-summary"></div>
+                    <div class="hospital-focus" id="hospital-focus"></div>
+                    <div class="hospital-list" id="hospital-list"></div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section collaboration-section" id="collaboration">
+            <div class="section-heading">
+                <p class="eyebrow" id="collaboration-eyebrow">Clinical Collaboration</p>
+                <h2 id="collaboration-title">按研究方向反向匹配医院与数据采集路径</h2>
+                <p id="collaboration-lead">我们可以联动科室主任推进定制化采集、数据勾画和问题定义，把模型研究和临床需求真正接起来。</p>
+            </div>
+            <div class="collaboration-grid">
+                <article class="info-card">
+                    <h3 id="collab-card-1-title">定制化取数</h3>
+                    <p id="collab-card-1-body">根据病种、模态和终点变量，反向定位合作医院和科室，规划采集范围。</p>
+                </article>
+                <article class="info-card">
+                    <h3 id="collab-card-2-title">标注与勾画</h3>
+                    <p id="collab-card-2-body">支持与医院联合完成结构化整理、病灶勾画和临床标签定义。</p>
+                </article>
+                <article class="info-card">
+                    <h3 id="collab-card-3-title">临床共创</h3>
+                    <p id="collab-card-3-body">让研究问题直接对齐科室主任和临床医生的真实痛点，提升项目转化意义。</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p id="footer-copy">MedData Hub · 多模态医疗数据与临床合作展示平台</p>
+    </footer>
+
+    <noscript>
+        <div class="noscript-banner">此页面需要 JavaScript 以加载数据集详情和动态医院地图。</div>
+    </noscript>
+    <script src="app.js?v=20260312-2"></script>
+</body>
+</html>

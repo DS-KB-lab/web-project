@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据集详情 | MedData Hub</title>
+    <meta name="description" id="page-description" content="医疗多模态数据集详情页，展示统计、图像、研究价值与合作方向。">
+    <link rel="stylesheet" href="style.css?v=20260312-5">
+    <script>
+        (function () {
+            var search = window.location.search || "";
+            var match = search.match(/[?&]lang=([^&#]+)/);
+            var queryLang = "";
+            var savedLang = "zh";
+            if (match && match[1]) {
+                try {
+                    queryLang = decodeURIComponent(match[1].replace(/\+/g, " "));
+                } catch (e) {
+                    queryLang = match[1];
+                }
+            }
+            try {
+                savedLang = localStorage.getItem("meddata-lang") || "zh";
+            } catch (e) {}
+            var lang = queryLang === "en" ? "en" : (savedLang === "en" ? "en" : "zh");
+            window.MEDDATA_LANG = lang;
+            document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+            try {
+                localStorage.setItem("meddata-lang", lang);
+            } catch (e) {}
+        })();
+    </script>
+    <script src="assets/generated/site-data.js?v=20260312-5"></script>
+    <script src="assets/generated/site-data-en.js?v=20260312-5"></script>
+</head>
+<body data-page="dataset-detail">
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" data-transition>
+                <span class="brand-mark">MD</span>
+                <span class="brand-copy">
+                    <strong>MedData Hub</strong>
+                    <small id="brand-tagline">Dataset Detail</small>
+                </span>
+            </a>
+            <div class="header-actions">
+                <nav class="site-nav">
+                    <a href="index.html#datasets" data-transition id="nav-datasets">全部数据集</a>
+                    <a href="index.html#hospitals" data-transition id="nav-hospitals">合作医院</a>
+                    <a href="index.html#collaboration" data-transition id="nav-collaboration">临床合作</a>
+                </nav>
+                <div class="lang-toggle" id="lang-toggle" aria-label="Language switch">
+                    <button type="button" class="lang-option" data-lang="zh">中文</button>
+                    <button type="button" class="lang-option" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="dataset-detail-root"></main>
+
+    <footer class="site-footer">
+        <p id="footer-copy">返回首页可继续浏览其他数据集与合作医院网络</p>
+    </footer>
+
+    <noscript>
+        <div class="noscript-banner">此页面需要 JavaScript 以加载对应数据集详情。</div>
+    </noscript>
+    <script src="app.js?v=20260312-5"></script>
+</body>
+</html>

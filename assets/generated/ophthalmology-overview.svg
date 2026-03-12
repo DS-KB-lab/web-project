@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="594" viewBox="0 0 1280 594">
+      <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#eef6ff"/>
+          <stop offset="48%" stop-color="#d9f3ee"/>
+          <stop offset="100%" stop-color="#f8fbff"/>
+        </linearGradient>
+        <linearGradient id="barGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0f5ea8"/>
+          <stop offset="100%" stop-color="#23a2b6"/>
+        </linearGradient>
+        <style>
+          .title { font: 700 44px 'Segoe UI', 'PingFang SC', sans-serif; fill: #112240; }
+          .subtitle { font: 400 19px 'Segoe UI', 'PingFang SC', sans-serif; fill: #49607d; }
+          .label { font: 600 18px 'Segoe UI', 'PingFang SC', sans-serif; fill: #56708f; }
+          .value { font: 700 34px 'Segoe UI', 'PingFang SC', sans-serif; fill: #123254; }
+          .note { font: 400 14px 'Segoe UI', 'PingFang SC', sans-serif; fill: #60758f; }
+          .group-title { font: 700 22px 'Segoe UI', 'PingFang SC', sans-serif; fill: #17395c; }
+          .axis { font: 500 15px 'Segoe UI', 'PingFang SC', sans-serif; fill: #506680; }
+          .axis-value { font-weight: 700; fill: #153a60; }
+          .axis-count { text-anchor: end; }
+        </style>
+      </defs>
+      <rect width="100%" height="100%" rx="36" fill="url(#bgGradient)"/>
+      <circle cx="1160" cy="96" r="96" fill="rgba(15, 94, 168, 0.08)"/>
+      <circle cx="110" cy="506" r="140" fill="rgba(35, 162, 182, 0.08)"/>
+      <text x="56" y="56" class="title">眼科多模态项目概览</text>
+      <text x="56" y="90" class="subtitle">当前图表基于 demo 子集；完整项目已达万人级，并可支撑 50 万人次临床验证</text>
+      
+            <g transform="translate(56.0, 108)">
+              <rect width="277.0" height="126" rx="24" fill="rgba(255,255,255,0.9)" stroke="rgba(26, 54, 93, 0.14)"/>
+              <text x="24" y="38" class="label">当前 demo 样例</text>
+              <text x="24" y="82" class="value">1221</text>
+              <text x="24" y="108" class="note">当前展示页载入样例</text>
+            </g>
+            
+            <g transform="translate(353.0, 108)">
+              <rect width="277.0" height="126" rx="24" fill="rgba(255,255,255,0.9)" stroke="rgba(26, 54, 93, 0.14)"/>
+              <text x="24" y="38" class="label">完整项目规模</text>
+              <text x="24" y="82" class="value">1万+</text>
+              <text x="24" y="108" class="note">真实世界眼科数据</text>
+            </g>
+            
+            <g transform="translate(650.0, 108)">
+              <rect width="277.0" height="126" rx="24" fill="rgba(255,255,255,0.9)" stroke="rgba(26, 54, 93, 0.14)"/>
+              <text x="24" y="38" class="label">临床验证能力</text>
+              <text x="24" y="82" class="value">50万+</text>
+              <text x="24" y="108" class="note">模型开发后可验证人次</text>
+            </g>
+            
+            <g transform="translate(947.0, 108)">
+              <rect width="277.0" height="126" rx="24" fill="rgba(255,255,255,0.9)" stroke="rgba(26, 54, 93, 0.14)"/>
+              <text x="24" y="38" class="label">病种覆盖</text>
+              <text x="24" y="82" class="value">7+</text>
+              <text x="24" y="108" class="note">CRVO-ME, DME, Fuchs 等</text>
+            </g>
+            
+      
+            <g transform="translate(56.0, 268.0)">
+              <rect width="570.0" height="272" rx="28" fill="rgba(255,255,255,0.86)" stroke="rgba(26, 54, 93, 0.14)"/>
+              <text x="28" y="34" class="group-title">demo 样例病种分布</text>
+              
+                <text x="28" y="68" class="axis">眼外伤</text>
+                <rect x="170" y="56" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="56" width="328.00" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="68" class="axis axis-value axis-count">762</text>
+                
+                <text x="28" y="98" class="axis">Fuchs综合征</text>
+                <rect x="170" y="86" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="86" width="141.19" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="98" class="axis axis-value axis-count">328</text>
+                
+                <text x="28" y="128" class="axis">DME</text>
+                <rect x="170" y="116" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="116" width="14.64" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="128" class="axis axis-value axis-count">34</text>
+                
+                <text x="28" y="158" class="axis">黄斑裂孔</text>
+                <rect x="170" y="146" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="146" width="12.91" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="158" class="axis axis-value axis-count">30</text>
+                
+                <text x="28" y="188" class="axis">CRVO-ME</text>
+                <rect x="170" y="176" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="176" width="12.05" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="188" class="axis axis-value axis-count">28</text>
+                
+                <text x="28" y="218" class="axis">高度近视</text>
+                <rect x="170" y="206" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="206" width="9.47" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="218" class="axis axis-value axis-count">22</text>
+                
+            </g>
+            
+            <g transform="translate(654.0, 268.0)">
+              <rect width="570.0" height="272" rx="28" fill="rgba(255,255,255,0.86)" stroke="rgba(26, 54, 93, 0.14)"/>
+              <text x="28" y="34" class="group-title">demo 样例模态分布</text>
+              
+                <text x="28" y="68" class="axis">CT DICOM</text>
+                <rect x="170" y="56" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="56" width="328.00" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="68" class="axis axis-value axis-count">733</text>
+                
+                <text x="28" y="98" class="axis">MRI DICOM</text>
+                <rect x="170" y="86" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="86" width="132.90" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="98" class="axis axis-value axis-count">297</text>
+                
+                <text x="28" y="128" class="axis">OCT</text>
+                <rect x="170" y="116" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="116" width="27.74" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="128" class="axis axis-value axis-count">62</text>
+                
+                <text x="28" y="158" class="axis">SLO</text>
+                <rect x="170" y="146" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="146" width="19.69" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="158" class="axis axis-value axis-count">44</text>
+                
+                <text x="28" y="188" class="axis">其他图像</text>
+                <rect x="170" y="176" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="176" width="12.08" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="188" class="axis axis-value axis-count">27</text>
+                
+                <text x="28" y="218" class="axis">病例文书</text>
+                <rect x="170" y="206" width="328.00" height="14" rx="7" fill="rgba(120, 144, 156, 0.2)"/>
+                <rect x="170" y="206" width="5.82" height="14" rx="7" fill="url(#barGradient)"/>
+                <text x="542.00" y="218" class="axis axis-value axis-count">13</text>
+                
+            </g>
+            
+    </svg>
